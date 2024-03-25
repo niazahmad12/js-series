@@ -45,7 +45,34 @@ const myFunction = function(){
 }
 
 // find datatype of any variable
-console.log(typeof outsideTemp ); // object
-console.log(typeof outsideTemp); // symbol
-console.log(typeof myFunction); // function object
-console.log(typeof heros);
+//console.log(typeof outsideTemp ); // object
+//console.log(typeof outsideTemp); // symbol
+//console.log(typeof myFunction); // function object
+//console.log(typeof heros);
+
+// https://262.ecma-international.org/5.1/#sec-11.4.3
+
+// ****************MEMEORY**************************
+
+// Stack (Primitive) , Heap (Non-Primitive)
+// 1- Stack (Primitive) provide copy of variable not directly change
+// example
+let myName = "Aslam Bhati" 
+let myOtherName = myName
+myName = "Akram Bhati"
+console.log(myOtherName)
+
+// 2- Heap (Non-Promitive)
+// example
+
+let userOne = {
+    name:"Ahmad",
+    id: "abc",
+    email: "test@gmail.com"
+}
+
+let userTwo = userOne
+userTwo.email="new@gmail.com"
+
+console.log(userOne);
+console.log(userTwo);
